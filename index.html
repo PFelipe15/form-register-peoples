@@ -14,6 +14,7 @@
         <h1>Formulario</h1>
         <div class="register-info">
 
+       
           <label htmlFor="ageId"  >Idade: </label>
           <input  class="ageInput" type="number" name="age" id="ageId"/>
           <div className="gender-container">
@@ -21,7 +22,7 @@
             <select name="gender" id="genderId">
               <option class="option" value="M">Masculino</option>
               <option class="option"  value="F">Feminino</option>
-              <input type="button"  class="button" onclick="cadClient()" value="Enviar"> </input>
+              <input type="button"  class="button" onclick="cadClient()" value="Registrar"> </input>
             </select>
         </div>
         </div>
@@ -29,7 +30,7 @@
 
      
        
-         <label  for="genderIdFilter"> Filtrar por :</label> 
+         <label  for="genderIdFilter"> Filtrar Busca :</label> 
         
             <input type="checkbox" class="option" id="genderIdFilterM" value="M" onclick="getClientsM()">Masculino</input>
             <input type="checkbox" class="option"  id="genderIdFilterF"  value="F" onclick="getClientsF()">Feminino </input>

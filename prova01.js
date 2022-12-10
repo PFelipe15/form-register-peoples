@@ -5,15 +5,14 @@ function cadClient() {
   const age = document.getElementById("ageId").value;
   const gender = document.getElementById("genderId").value;
 
-  if (gender === "M" || gender === "F") {
+  if (age>=0) {
     listClients.push({
       age: age,
       gender: gender,
     });
-
     alert("Registrado com sucesso!");
   } else {
-    alert("Erro, cadastre com F para Feminino e M para Masculino");
+    alert("Por favor, digite uma Idade maior que 0!");
   }
 
   let checkBoxM = document.getElementById("genderIdFilterM");

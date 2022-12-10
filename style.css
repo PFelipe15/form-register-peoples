@@ -3,20 +3,17 @@
   margin: 0;
 }
 
-body {
-  text-align: center;
-}
-
 .form {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 .fieldset {
   width: 720px;
-  height: 720px;
-  text-align: justify;
+  height: 100%;
+  text-align: center;
+  background-color: #615d5d;
 }
 
 .fieldset h1 {
@@ -29,7 +26,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
 }
 
 label {
@@ -45,13 +41,13 @@ label {
 select {
   margin: 5px 5px 5px 5px;
   width: 120px;
-  height: 35px;
+  height: 25px;
   font-size: 20px;
 }
 
 .button {
   width: 70px;
-  height: 20px;
+  height: 25px;
   font-size: 15px;
 }
 
