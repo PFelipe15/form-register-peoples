@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./prova01.js"></script>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form class="form">
+      <fieldset class="fieldset">
+        <h1>Formulario</h1>
+        <div class="register-info">
+
+          <label htmlFor="ageId"  >Idade: </label>
+          <input  class="ageInput" type="number" name="age" id="ageId"/>
+          <div className="gender-container">
+            <label htmlFor="gender">Genero: </label> 
+            <select name="gender" id="genderId">
+              <option class="option" value="M">Masculino</option>
+              <option class="option"  value="F">Feminino</option>
+              <input type="button"  class="button" onclick="cadClient()" value="Enviar"> </input>
+            </select>
+        </div>
+        </div>
+        
+
+     
+       
+         <label  for="genderIdFilter"> Filtrar por :</label> 
+        
+            <input type="checkbox" class="option" id="genderIdFilterM" value="M" onclick="getClientsM()">Masculino</input>
+            <input type="checkbox" class="option"  id="genderIdFilterF"  value="F" onclick="getClientsF()">Feminino </input>
+       
+       
+          
+            <h1 style="width: 100%;  text-align: center; font-size: 40px; " >
+            Clientes
+          </h1>
+            <div class="saidaDados">
+  
+            <p id="outputMas" >
+              
+            </p>
+  
+            <p id="outputFem">
+  
+            </p>
+
+            </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
