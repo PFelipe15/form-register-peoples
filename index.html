@@ -13,10 +13,16 @@
   <body>
     <form class="form">
       <fieldset class="fieldset">
-        <h1>Formulario</h1>
+        <fieldset>
+
+          <h1>Formulario</h1>
+        </fieldset>
+        <h1 style="width: 100%;  text-align: center; font-size: 35px; ">
+         Cadastro
+        </h1>
         <div class="register-info">
 
-       
+         
           <label htmlFor="ageId"  >Idade: </label>
           <input  class="ageInput" type="number" name="age" id="ageId"/>
           <div className="gender-container">
@@ -24,8 +30,11 @@
             <select name="gender" id="genderId">
               <option class="option" value="M">Masculino</option>
               <option class="option"  value="F">Feminino</option>
-              <input type="button"  class="button" onclick="cadClient()" value="Registrar"> </input>
+             
             </select>
+
+
+            <input type="button" class="button" onclick="cadClient()" value="Registrar"> </input>
         </div>
         </div>
         
@@ -37,9 +46,13 @@
             <input type="checkbox" class="option" id="genderIdFilterM" value="M" onclick="getClientsM()">Masculino</input>
             <input type="checkbox" class="option"  id="genderIdFilterF"  value="F" onclick="getClientsF()">Feminino </input>
        
-       
+        <select name="order" id="orderId" class="order-style">
+          <option class="option" value="asc">Asc</option>
+          <option class="option" value="desc">Desc</option>
+        
+        </select>
           
-            <h1 style="width: 100%;  text-align: center; font-size: 40px; " >
+            <h1 style="width: 100%;  text-align: center; font-size: 35px; " >
             Clientes
           </h1>
             <div class="saidaDados">

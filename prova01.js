@@ -5,7 +5,7 @@ function cadClient() {
   const age = document.getElementById("ageId").value;
   const gender = document.getElementById("genderId").value;
 
-  if (age>=0) {
+  if (age >= 0) {
     listClients.push({
       age: age,
       gender: gender,
@@ -38,7 +38,7 @@ function getClientsM() {
   if (filter.length === 0) {
     out.innerHTML = "Não há Registros!";
   }
-  let order = "asc";
+  let order = document.getElementById("orderId").value;
   const sortedClients = filter.sort((a, b) => {
     if (order === "asc") {
       return a.age > b.age ? 1 : -1;
@@ -65,7 +65,7 @@ function getClientsF() {
     out.innerHTML = "Não há Registros!";
   }
 
-  let order = "asc";
+  let order = document.getElementById("orderId").value;
   const sortedClients = filter.sort((a, b) => {
     if (order === "asc") {
       return a.age > b.age ? 1 : -1;
@@ -74,7 +74,7 @@ function getClientsF() {
   });
   sortedClients.map((item) => {
     out.innerHTML += `<fieldset>
-    Idade: ${item.age} <br>
+    Idade: ${item.age}<br>
     Genero: ${item.gender} <br> 
     </fieldset> 
     
