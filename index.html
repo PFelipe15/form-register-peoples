@@ -40,16 +40,21 @@
         
 
      
-       
+       <div class="filter-list">
          <label  for="genderIdFilter"> Filtrar Busca :</label> 
+ 
+         <input type="checkbox" class="option" id="genderIdFilterM" value="M" onclick="getClientsM()"> <h4>Masculino </h4></input> 
+         <input type="checkbox" class="option"  id="genderIdFilterF"  value="F" onclick="getClientsF()"><h4>Feminino </h4> </input>
+
+         <select name="order" id="orderId" class="order-style">
+           <option class="option" value="asc">Asc</option>
+           <option class="option" value="desc">Desc</option>
+         </select>
+          
+       </div>
         
-            <input type="checkbox" class="option" id="genderIdFilterM" value="M" onclick="getClientsM()">Masculino</input>
-            <input type="checkbox" class="option"  id="genderIdFilterF"  value="F" onclick="getClientsF()">Feminino </input>
-       
-        <select name="order" id="orderId" class="order-style">
-          <option class="option" value="asc">Asc</option>
-          <option class="option" value="desc">Desc</option>
-        
+          
+
         </select>
           
             <h1 style="width: 100%;  text-align: center; font-size: 35px; " >
@@ -66,8 +71,10 @@
             </p>
 
             </div>
+            <input type="button" value="Limpar" class="button-refresh" onclick="refreshAll()">
       </fieldset>
     </form>
      
+    <h2>Desenvolvido por Paulo Felipe </h2>
   </body>
 </html>

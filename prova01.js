@@ -81,3 +81,8 @@ function getClientsF() {
     `;
   });
 }
+
+function refreshAll(){
+  document.location.reload(true);
+ 
+}
