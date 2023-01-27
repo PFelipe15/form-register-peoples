@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="./prova01.js"></script>
 
       <link rel="stylesheet" href="style.css">
@@ -13,68 +14,51 @@
   <body>
     <form class="form">
       <fieldset class="fieldset">
-        <fieldset>
-
-          <h1>Formulario</h1>
-        </fieldset>
-        <h1 style="width: 100%;  text-align: center; font-size: 35px; ">
-         Cadastro
-        </h1>
-        <div class="register-info">
-
-         
-          <label htmlFor="ageId"  >Idade: </label>
-          <input  class="ageInput" type="number" name="age" id="ageId"/>
-          <div className="gender-container">
-            <label htmlFor="gender">Genero: </label> 
-            <select name="gender" id="genderId">
+        <legend class="legend">Formulario</legend>
+        <h1 class="text-center mb-3">Cadastro</h1>
+        <div class="form-group">
+          <label for="ageId"  >Idade: </label>
+          <input  class="form-control ageInput" type="number" name="age" id="ageId"/>
+          <div class="form-group gender-container">
+            <label for="gender">Genero: </label> 
+            <select class="form-control" name="gender" id="genderId">
               <option class="option" value="M">Masculino</option>
               <option class="option"  value="F">Feminino</option>
-             
             </select>
-
-
-            <input type="button" class="button" onclick="cadClient()" value="Registrar"> </input>
+          </div>
+          <div class="text-center">
+            <input type="button" class="btn btn-primary" onclick="cadClient()" value="Registrar">
+          </div>
         </div>
+        <div class="form-group filter-list">
+         <label for="genderIdFilter"> Filtrar Busca :</label> 
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="checkbox" id="genderIdFilterM" value="M" onclick="getClientsM()">
+           <label class="form-check-label" for="genderIdFilterM">Masculino </label> 
+         </div>
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="checkbox" id="genderIdFilterF" value="F" onclick="getClientsF()">
+           <label class="form-check-label" for="genderIdFilterF">Feminino </label> 
+         </div>
+         <div class="form-group order-style">
+           <label for="orderId">Ordernar por:</label>
+           <select class="form-control" name="order" id="orderId">
+             <option class="option" value="asc">Asc</option>
+             <option class="option" value="desc">Desc</option>
+           </select>
+         </div>
         </div>
-        
-
-     
-       <div class="filter-list">
-         <label  for="genderIdFilter"> Filtrar Busca :</label> 
- 
-         <input type="checkbox" class="option" id="genderIdFilterM" value="M" onclick="getClientsM()"> <h4>Masculino </h4></input> 
-         <input type="checkbox" class="option"  id="genderIdFilterF"  value="F" onclick="getClientsF()"><h4>Feminino </h4> </input>
-
-         <select name="order" id="orderId" class="order-style">
-           <option class="option" value="asc">Asc</option>
-           <option class="option" value="desc">Desc</option>
-         </select>
-          
-       </div>
-        
-          
-
-        </select>
-          
-            <h1 style="width: 100%;  text-align: center; font-size: 35px; " >
-            Clientes
-          </h1>
-            <div class="saidaDados">
-  
-            <p id="outputMas" >
-              
-            </p>
-  
-            <p id="outputFem">
-  
-            </p>
-
-            </div>
-            <input type="button" value="Limpar" class="button-refresh" onclick="refreshAll()">
+        <h1 class="text-center mb-3">Clientes</h1>
+        <div class="saidaDados">
+          <p id="outputMas"></p>
+          <p id="outputFem"></p>
+        </div>
+        <div class="text-center">
+          <input type="button" value="Limpar" class="btn btn-secondary" onclick="refreshAll()">
+        </div>
       </fieldset>
     </form>
-     
-    <h2>Desenvolvido por Paulo Felipe </h2>
+    <h2 class="text-center">Desenvolvido por Paulo Felipe </h2>
+ 
   </body>
 </html>
